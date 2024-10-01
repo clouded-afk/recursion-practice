@@ -14,3 +14,18 @@ function iterationFibonacci(num) {
 }
 
 console.log(iterationFibonacci(8))
+
+
+function recursionFibonacci(num) {
+    if (num == 1) {
+        return [0]
+    } else if (num == 2){
+        return [0, 1]
+    }
+
+    let array = recursionFibonacci(num - 1)
+    array.push(array[array.length - 1] + array[array.length - 2])
+    return array
+}
+
+console.log(recursionFibonacci(8))
